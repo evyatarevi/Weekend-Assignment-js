@@ -1,16 +1,20 @@
+// ex1.1
+const checkBool = bool => bool ? 'Yes' : 'No';
+
+
 // ex2.1
 const numbers = [19, 5, 42, 2, 77];
 const findSumTowLowestNum = arr => {
     const sortArr = [...arr].sort((a, b) => a - b);
     return sortArr[0] + sortArr[1];
 }
-console.log(findSumTowLowestNum(numbers));
+// console.log(findSumTowLowestNum(numbers));
 
 
 // ex2.2
 const arr = [0, 1, 0, 1, 0];
 const convertToBinary = arr => parseInt(arr.reduce((sumNumber, num) => sumNumber += num, ''), 2);
-console.log(convertToBinary(arr));
+// console.log(convertToBinary(arr));
 
 
 // ex2.3
@@ -18,7 +22,7 @@ const findNextPerfectSquare = number => {
     const sqrNum = Math.sqrt(number);
     return sqrNum * 10 % 10 !== 0 ? -1 : (sqrNum + 1) * (sqrNum + 1)
 }
-console.log(findNextPerfectSquare(121));
+// console.log(findNextPerfectSquare(121));
 
 
 // ex2.4
@@ -30,18 +34,18 @@ const findUniqNumber = numbersArr => {
     }
     return 'No uniq number found'
 }
-console.log(findUniqNumber([1, 1, 1, 2]));
+// console.log(findUniqNumber([1, 1, 1, 2]));
 
 
 // ex2.5
 const summation = num => new Array(num).fill(1).reduce((sum, curr, i) => sum += i + 1, 0);
-console.log(summation(8));
+// console.log(summation(8));
 
 
 // ex2.6
 const findCentury = year => year % 100 === 0 ? year / 100 : Math.floor(year / 100) + 1;
 
-console.log(findCentury(1705));
+// console.log(findCentury(1705));
 
 
 // ex2.7
@@ -59,7 +63,7 @@ const basicMath = (operator, num1, num2) => {
     // option b:
     // return eval(num1+operator+num2);
 }
-console.log(basicMath('*', 5, 3));
+// console.log(basicMath('*', 5, 3));
 
 
 // ex3.1
@@ -72,10 +76,41 @@ const nb_year = (p0, growthPercent, aug, targetPopulation) => {
     }
     return `After ${counter} years the populate will be ${targetPopulation}`;
 }
-console.log(nb_year(1500, 5, 100, 5000));
+// console.log(nb_year(1500, 5, 100, 5000));
 
 
 // ex3.2
 const peopleOnBus = arr => arr.reduce((currPeople, arrStation) => currPeople += arrStation[0] - arrStation[1], 0);
 
-console.log(peopleOnBus([[5, 0], [2, 1], [3, 2], [1, 4]]));
+// console.log(peopleOnBus([[5, 0], [2, 1], [3, 2], [1, 4]]));
+
+
+// ex4.1
+const fibonacci = n => {
+    let n1 = 0;
+    let n2 = 1;
+    for (let i = 0; i < n - 2; i++) {
+        i % 2 === 0 ? n1 = n1 + n2 : n2 = n1 + n2
+    }
+    return n1 > n2 ? n1 : n2;
+}
+// console.log(fibonacci(9));
+
+
+// ex5.1
+const trimStr = str => str.slice(1, str.length - 1);
+
+// ex5.2
+const repeatStr = (num, str) => str.repeat(num);
+
+// ex5.3
+const toCamelCase = str => {
+    let indexDash = str.indexOf('-');
+    while (indexDash !== -1) {
+        str = str.slice(0, indexDash) + str.slice(indexDash + 1, indexDash + 2).toLocaleUpperCase() + str.slice(indexDash + 2)
+        indexDash = str.indexOf('-') !== -1 ? str.indexOf('-') : str.indexOf('_');
+
+    }
+    return str;
+}
+console.log(toCamelCase("the-stealth-warrior"))
