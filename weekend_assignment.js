@@ -111,6 +111,6 @@ const toCamelCase = str => {
         indexDash = str.indexOf('-') !== -1 ? str.indexOf('-') : str.indexOf('_');
 
     }
-    return str;
+    // return str;
 }
 console.log(toCamelCase("the-stealth-warrior"))
