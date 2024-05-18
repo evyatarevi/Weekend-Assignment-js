@@ -1,0 +1,12 @@
+main{
+    display: flex;
+}
+
+img{
+    border: 1px solid black;
+    display: none;
+}
+
+.visible{
+    display: block;
+}

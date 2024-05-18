@@ -4,16 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js" defer></script>
     <title>Dice Game</title>
 </head>
 <body>
     <main>
-        <div class="player1Card"></div>
-        <div class="board">
-            <button class="roll-btn">Roll dices</button>
+        <div class="player1Card">
+            <h2>Player 1</h2>
+            <div>0</div>
         </div>
-        <div class="player2Card"></div>
+        <div class="board">
+            <div class="dices">
+                <div class="dices1">
+                    <img alt="dice-1.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-1.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-2.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-3.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-4.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-5.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-6.png?raw=true"/>
+                </div>
+                <div class="dices2">
+                    <img alt="dice-1.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-1.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-2.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-3.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-4.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-5.png?raw=true"/>
+                    <img alt="dice-2.png" src="https://github.com/morMBen/Dice_Game_Starter/blob/main/dice-6.png?raw=true"/>    
+                </div>
+            </div>
+            <div class="resultRolling">0</div>
+            <button class="roll-btn">Roll dices</button>
+            <button class="hold-btn">Hold</button>
+        </div>
+        <div class="player2Card">
+            <h2>Player 2</h2>
+        </div>
     </main>
 </body>
 </html>

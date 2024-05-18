@@ -7,8 +7,21 @@ export default class Player {
         this.#score = 0;
     }
 
+    get name() {
+        return this.#name;
+    }
+
+    get score() {
+        return this.#score;
+    }
+
+    set name(name) {
+        this.#name = name;
+    }
+
     set score(score) {
-        this.#score += score;
+        this.#score = score;
+        document.querySelector('.player1Card div').textContent = this.score;
     }
 }
 

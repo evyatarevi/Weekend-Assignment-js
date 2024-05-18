@@ -11,7 +11,6 @@ export default class Dice {
 
     rollDice() {
         this.#result = Math.floor(Math.random() * 6) + 1;
-        return;
     }
 }
 
