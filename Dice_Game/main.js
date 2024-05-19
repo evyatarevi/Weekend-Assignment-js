@@ -7,13 +7,12 @@ const startApp = () => {
 
     document.querySelector('.roll-btn').addEventListener('click', () => {
         newGame.rollDices();
-        // set time out
         if (newGame.checkDoubleSix()) {
             newGame.roundScore = 0;
             newGame.changePlayer();
             return;
         }
-        newGame.roundScore = newGame.roundScore + newGame.resultRolling;
+        newGame.roundScore += newGame.resultRolling;
     });
 
     document.querySelector('.hold-btn').addEventListener('click', () => {
@@ -25,9 +24,6 @@ const startApp = () => {
         newGame.roundScore = 0;
         newGame.changePlayer();
     });
-
-
-
 
 
     // new game btn

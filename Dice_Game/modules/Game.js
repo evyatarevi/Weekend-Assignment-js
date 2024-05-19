@@ -8,8 +8,6 @@ export default class Game {
     #players;
     #rolling;
     #score;
-    #dicesImages1;
-    #dicesImages2;
 
     constructor(name1, name2) {
         this.#players = {
@@ -63,6 +61,7 @@ export default class Game {
     get resultRolling() {
         return this.#rolling.result;
     }
+
 
     //score
     get winScore() {
@@ -125,14 +124,3 @@ export default class Game {
     }
 
 }
-
-/*
-pro:
-1. current player
-2. win score
-
-method:
-1. change player
-2. chang win score
-
-*/

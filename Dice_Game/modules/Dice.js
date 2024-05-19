@@ -13,11 +13,3 @@ export default class Dice {
         this.#result = Math.floor(Math.random() * 6) + 1;
     }
 }
-
-/*
-pro:
-1. result
-
-method:
-1. roll.
-*/
