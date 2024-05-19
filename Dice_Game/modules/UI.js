@@ -39,4 +39,12 @@ export default class UI {
 
     }
 
+    updateScore(player) {
+        if (player.id === 1) {
+            this.#player1.querySelector('div').textContent = player.score;
+            return;
+        }
+        this.#player2.querySelector('div').textContent = player.score;
+    }
+
 }

@@ -16,7 +16,7 @@ const startApp = () => {
     });
 
     document.querySelector('.hold-btn').addEventListener('click', () => {
-        newGame.currentPlayer.score += newGame.roundScore;
+        newGame.saveScore();
         if (newGame.checkWin()) {
             alert(`${newGame.currentPlayer.name} win!`)
             return;

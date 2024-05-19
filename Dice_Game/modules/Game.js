@@ -115,6 +115,11 @@ export default class Game {
         return false;
     }
 
+    saveScore() {
+        this.currentPlayer.score += this.roundScore;
+        this.ui.updateScore(this.currentPlayer);
+    }
+
 }
 
 /*

@@ -27,7 +27,7 @@ export default class Player {
 
     set score(score) {
         this.#score = score;
-        document.querySelector('.player1 div').textContent = this.score;
+        // document.querySelector('.player1 div').textContent = this.score;
     }
 }
 
