@@ -3,8 +3,6 @@ import Game from './modules/Game.js';
 
 const startApp = () => {
     const newGame = new Game();
-    // arr images
-
 
     document.querySelector('.roll-btn').addEventListener('click', () => {
         newGame.rollDices();
@@ -18,7 +16,7 @@ const startApp = () => {
     });
 
     document.querySelector('.hold-btn').addEventListener('click', () => {
-        newGame.currentPlayer.score = newGame.currentPlayer.score + newGame.roundScore;
+        newGame.currentPlayer.score += newGame.roundScore;
         if (newGame.checkWin()) {
             alert(`${newGame.currentPlayer.name} win!`)
             return;
@@ -26,11 +24,7 @@ const startApp = () => {
         newGame.roundScore = 0;
         newGame.changePlayer();
     });
-    // btn hold: -> event listener
-    // added rounded score to global score
-    // check win
-    // else:
-    // change player
+
 
 
 

@@ -13,8 +13,8 @@ export default class Game {
 
     constructor(name1, name2) {
         this.#players = {
-            player1: new Player(name1),
-            player2: new Player(name2)
+            player1: new Player('Evyatar', 1),
+            player2: new Player('Evi', 2)
         };
 
         this.#players.currentPlayer = this.player1;
@@ -46,6 +46,10 @@ export default class Game {
         return this.#players.currentPlayer;
     }
 
+    set currentPlayer(player) {
+        this.#players.currentPlayer = player;
+    }
+
 
     //rolling
     get dice1() {
@@ -69,10 +73,6 @@ export default class Game {
         return this.#score.roundScore;
     }
 
-    set currentPlayer(player) {
-        this.#players.currentPlayer = player;
-    }
-
     set winScore(score) {
         if (score <= 0) {
             return alert(ERROR_SCORE_MESSAGE);
@@ -82,6 +82,7 @@ export default class Game {
 
     set roundScore(score) {
         this.#score.roundScore = score;
+        this.ui.displayRoundedScore(score);
     }
 
     rollDices() {
@@ -104,6 +105,7 @@ export default class Game {
         } else {
             this.#players.currentPlayer = this.player1;
         }
+        this.ui.displayCurrentPlayer(this.currentPlayer.id);
     }
 
     checkWin() {

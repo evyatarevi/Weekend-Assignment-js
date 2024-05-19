@@ -10,3 +10,7 @@ img{
 .visible{
     display: block;
 }
+
+.current-player{
+    border: solid 1px red;
+}

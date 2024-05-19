@@ -1,10 +1,12 @@
 export default class Player {
     #name;
     #score;
+    #id;
 
-    constructor(name) {
+    constructor(name, id) {
         this.#name = name;
         this.#score = 0;
+        this.#id = id;
     }
 
     get name() {
@@ -15,13 +17,17 @@ export default class Player {
         return this.#score;
     }
 
+    get id() {
+        return this.#id;
+    }
+
     set name(name) {
         this.#name = name;
     }
 
     set score(score) {
         this.#score = score;
-        document.querySelector('.player1Card div').textContent = this.score;
+        document.querySelector('.player1 div').textContent = this.score;
     }
 }
 
