@@ -3,6 +3,7 @@ import Game from './modules/Game.js';
 
 const startApp = () => {
     const newGame = new Game();
+    newGame.boldCurrentPlayer();
 
     document.querySelector('.roll-btn').addEventListener('click', () => {
         newGame.rollDices();

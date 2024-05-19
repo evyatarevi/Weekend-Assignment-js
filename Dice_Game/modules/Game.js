@@ -85,6 +85,10 @@ export default class Game {
         this.ui.displayRoundedScore(score);
     }
 
+    boldCurrentPlayer() {
+        this.ui.displayCurrentPlayer(this.currentPlayer.id)
+    }
+
     rollDices() {
         this.dice1.rollDice();
         this.dice2.rollDice();
@@ -105,7 +109,7 @@ export default class Game {
         } else {
             this.#players.currentPlayer = this.player1;
         }
-        this.ui.displayCurrentPlayer(this.currentPlayer.id);
+        this.boldCurrentPlayer()
     }
 
     checkWin() {
